@@ -110,3 +110,5 @@ fun u1ej22 () {
     val frasedereplace = frase.replace(vocal.lowercase(),vocal.uppercase())
     println(frasedereplace)
 }
+
+ // hoooola
