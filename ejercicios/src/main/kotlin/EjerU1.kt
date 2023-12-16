@@ -1,5 +1,7 @@
  /**
   * Pide al usuario una temperatura en celsius y la combierte en farenheight
+  * @param num: un numero
+  * @return: El numero convertido en faraneheight
   */
  fun u1ej1(){
      print("Dime el numero a transformar: ")
@@ -14,6 +16,8 @@
 // ------------------------------------------------------------------------------------------------------------------
  /**
   * Pide el importe final de un artículo, calcula e imprime por pantalla el IVA que se ha pagado y el importe sin IVA
+  * @param pagado: pide un numero
+  * @return: str de el numero restandole un 10%
   */
 
  fun u1ej6 () {
@@ -30,6 +34,9 @@
 // ------------------------------------------------------------------------------------------------------------------
  /**
   * Pide el peso y la estatura y calcula la masa corporal
+  * @param peso: pide un numero
+  * @param altura: pide un numero
+  * @return: El indice de masa corporal
   */
  fun u1ej12 () {
      try {
@@ -46,6 +53,8 @@
 // ------------------------------------------------------------------------------------------------------------------
  /**
   * Calcula el interes del 0.04% de un valor que hayamos introducido
+  * @param ingre: un numero
+  * @return: un str de los siguientes años de intereses
   */
 
  fun u1ej15 () {
@@ -95,20 +104,63 @@
   * Pide al usuario una frase y la invierte
   */
  fun u1ej21 (){
-     print("Dime una frase y yo la invierto: ")
-     val frase = readln()
-     println("La frase invertida es:")
-     println(frase.reversed())
+     try {
+         print("Dime una frase y yo la invierto: ")
+         val frase = readln()
+         println("La frase invertida es:")
+         println(frase.reversed())
+    }catch (e: Exception) {
+         println("Error inesperado")
+    }
  }
 // ------------------------------------------------------------------------------------------------------------------
-fun u1ej22 () {
+ /**
+  * Pide una frase y una vocal, cambia la vocal en minusculas por mayusculas
+  */
+ fun u1ej22 () {
+    try {
+        print("Dime una frase: ")
+        val frase = readln()
+        print("Ahora una vocal")
+        val vocal = readln()
+        val frasedereplace = frase.replace(vocal.lowercase(),vocal.uppercase())
+        println(frasedereplace)
+    }catch (e: Exception) {
+        println("Error inesperado")
+    }
+ }
+// ------------------------------------------------------------------------------------------------------------------
+ /**
+  *  pregunta por consola el precio de un producto en euros con dos decimales y
+  *  muestra por pantalla el número de euros y el número de céntimos del precio introducido
+  */
+ fun u1ej24() {
+    try {
+        print("Pon el precio sepradao por un puto")
+        val precio = readln().split(".")
+        println("Tu producto cuesta ${precio[0]}€ y ${precio[1]}")
+    }catch (e:Exception){
+        println("Error inesperado")
+    }
+ }
+// ------------------------------------------------------------------------------------------------------------------
+ /**
+  * programa que pregunte al usuario la fecha de su nacimiento en formato dd/mm/aaaa y
+  * muestra por pantalla, el día, el mes y el año
+  */
+ fun u1ej25 () {
+     try {
+         print("Escribe tu fecha de nacimiento en formato dd/mm/aaaa: ")
+         val fecha = readln().split("/")
+         println("Naciste el dia ${fecha[0]} del mes ${fecha[1]} del ${fecha[2]}")
+     }catch (e:Exception){
+         println("Error inesperado")
+     }
+ }
+// ------------------------------------------------------------------------------------------------------------------
+ /**
+  *
+  */
+ fun u1ej26 () {
 
-    print("Dime una frase")
-    val frase = readln()
-    print("Ahora una vocal")
-    val vocal = readln()
-    val frasedereplace = frase.replace(vocal.lowercase(),vocal.uppercase())
-    println(frasedereplace)
-}
-
- // hoooola
+ }
