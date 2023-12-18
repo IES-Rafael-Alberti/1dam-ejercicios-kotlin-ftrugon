@@ -1,7 +1,5 @@
  /**
   * Pide al usuario una temperatura en celsius y la combierte en farenheight
-  * @param num: un numero
-  * @return: El numero convertido en faraneheight
   */
  fun u1ej1(){
      print("Dime el numero a transformar: ")
@@ -16,8 +14,6 @@
 // ------------------------------------------------------------------------------------------------------------------
  /**
   * Pide el importe final de un artículo, calcula e imprime por pantalla el IVA que se ha pagado y el importe sin IVA
-  * @param pagado: pide un numero
-  * @return: str de el numero restandole un 10%
   */
 
  fun u1ej6 () {
@@ -34,9 +30,6 @@
 // ------------------------------------------------------------------------------------------------------------------
  /**
   * Pide el peso y la estatura y calcula la masa corporal
-  * @param peso: pide un numero
-  * @param altura: pide un numero
-  * @return: El indice de masa corporal
   */
  fun u1ej12 () {
      try {
@@ -53,8 +46,6 @@
 // ------------------------------------------------------------------------------------------------------------------
  /**
   * Calcula el interes del 0.04% de un valor que hayamos introducido
-  * @param ingre: un numero
-  * @return: un str de los siguientes años de intereses
   */
 
  fun u1ej15 () {
@@ -154,13 +145,41 @@
          val fecha = readln().split("/")
          println("Naciste el dia ${fecha[0]} del mes ${fecha[1]} del ${fecha[2]}")
      }catch (e:Exception){
-         println("Error inesperado")
+         println("Fecha no permitida")
      }
  }
 // ------------------------------------------------------------------------------------------------------------------
  /**
-  *
+  * pide una lista de la compra con comas y devolvera cada producto en una linea distinta
   */
  fun u1ej26 () {
+     try {
+         println("Dime la cesta de la compra separados por ,: ")
+         val cosas = readln().split(",")
+         println(cosas.joinToString(separator = "\n"))
+         //for (i in cosas) {
+         //    println(i)
+         //}    No se puede usar bucles
+     }catch (e:Exception) {
+         println("Error inesperado")
+     }
 
+ }
+// ------------------------------------------------------------------------------------------------------------------
+ /**
+  * Pide datos de un producto y devuelve un str de esos datos de manera distinta
+  */
+
+ fun u1ej27() {
+     try {
+         print("Dime el nombre del producto: ")
+         val product = readln()
+         print("Dime el precio del producto: ")
+         val precio = readln().toFloat()
+         print("Dime el numero de unidades del producto: ")
+         val numunit = readln().toInt()
+         println("$product | ${String.format("%.2f",precio)} | $numunit | ${String.format("%.2f",numunit * precio)}")
+     }catch (e:Exception) {
+         println("Error")
+     }
  }

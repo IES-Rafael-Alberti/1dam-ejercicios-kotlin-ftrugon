@@ -1,4 +1,5 @@
 fun main() {
+// U1
     //u1ej1()
     //u1ej6()
     //u1ej12()
@@ -9,4 +10,11 @@ fun main() {
     //u1ej22()
     //u1ej24()
     //u1ej25()
+    //u1ej26()
+    //u1ej27()
+
+// U2
+    //condiu2ej2()
+    //condiu2ej3()
+    condiu2ej6()
 }
