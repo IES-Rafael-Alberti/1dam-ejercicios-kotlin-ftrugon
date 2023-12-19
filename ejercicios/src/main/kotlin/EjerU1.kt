@@ -67,10 +67,10 @@
  fun u1ej18 () {
     try {
         print("Dime tu nombre: ")
-        val nombre = readln()
-        println("Todo tu nombre en minusculas es ${nombre.lowercase()}")
+        val nombre = readln().lowercase()
+        println("Todo tu nombre en minusculas es $nombre")
         println("Todo tu nombre en mayusculas es ${nombre.uppercase()}")
-        println("Todo tu nombre en formato titulo es $nombre")
+        println("Todo tu nombre en formato titulo es ${capitalize(nombre)}")
 
     }catch (e: Exception){
         print("Parametro incorrecto")
@@ -183,3 +183,23 @@
          println("Error")
      }
  }
+// ------------------------------------------------------------------------------------------------------------------
+ /**
+  * Otras funciones
+  */
+ fun capitalize(nombre: String) : String {
+
+     val dividir = nombre.split(" ")
+     var nuevafrase = ""
+     for (palabra in dividir) {
+         nuevafrase += if (palabra == dividir[0]){
+               palabra[0].(palabra[0].lowercase(), palabra[0].uppercase())
+         }else{
+
+             " "+ palabra.replace(palabra[0].lowercase(), palabra[0].uppercase())
+         }
+
+     }
+     return nuevafrase
+ }
+

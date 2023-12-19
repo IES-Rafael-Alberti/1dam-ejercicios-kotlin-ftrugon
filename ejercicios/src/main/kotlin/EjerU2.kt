@@ -48,7 +48,7 @@ fun condiu2ej6 () {
         val sexo = readln()
         if (sexo.lowercase() == "h") {
             print("Dime tu apellido: ")
-            val apellido =
+            val apellido = println("hola")
         }else if (sexo.lowercase() == "m") {
 
         }

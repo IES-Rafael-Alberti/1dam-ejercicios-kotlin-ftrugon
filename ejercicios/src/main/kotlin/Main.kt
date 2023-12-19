@@ -4,7 +4,7 @@ fun main() {
     //u1ej6()
     //u1ej12()
     //u1ej15()
-    //u1ej18()
+    u1ej18()
     //u1ej20()
     //u1ej21()
     //u1ej22()
@@ -16,5 +16,5 @@ fun main() {
 // U2
     //condiu2ej2()
     //condiu2ej3()
-    condiu2ej6()
+    //condiu2ej6()
 }
