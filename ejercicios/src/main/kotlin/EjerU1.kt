@@ -193,12 +193,10 @@
      var nuevafrase = ""
      for (palabra in dividir) {
          nuevafrase += if (palabra == dividir[0]){
-               palabra[0].(palabra[0].lowercase(), palabra[0].uppercase())
+             palabra.replaceFirstChar { palabra[0].uppercase() }
          }else{
-
-             " "+ palabra.replace(palabra[0].lowercase(), palabra[0].uppercase())
+             " "+palabra.replaceFirstChar { palabra[0].uppercase() }
          }
-
      }
      return nuevafrase
  }
