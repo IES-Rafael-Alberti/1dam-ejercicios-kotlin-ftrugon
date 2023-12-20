@@ -187,9 +187,9 @@
  /**
   * Otras funciones
   */
- fun capitalize(nombre: String) : String {
+ fun capitalize(mensage: String) : String {
 
-     val dividir = nombre.split(" ")
+     val dividir = mensage.split(" ")
      var nuevafrase = ""
      for (palabra in dividir) {
          nuevafrase += if (palabra == dividir[0]){

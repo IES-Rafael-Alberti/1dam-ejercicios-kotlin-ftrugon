@@ -42,17 +42,39 @@ fun condiu2ej3() {
     }
 }
 // ------------------------------------------------------------------------------------------------------------------
+/**
+ * Te pide el sexo y el apellido, dependiendo de la respuesta estas en el grupo A B o en ninguno
+ */
 fun condiu2ej6 () {
     try {
-        println("Dime el sexo(h,m): ")
+        print("Dime el sexo(h,m): ")
         val sexo = readln()
         if (sexo.lowercase() == "h") {
             print("Dime tu apellido: ")
-            val apellido = println("hola")
+            val apellido = readln()
+            if (apellido[0] >= 'm'){
+                println("perteneces al grupo B")
+            }else{
+                println("no perteneces a ningun grupo")
+            }
         }else if (sexo.lowercase() == "m") {
-
+            print("Dime tu apellido: ")
+            val apellido = readln()
+            if (apellido[0] < 'm'){
+                println("perteneces al grupo A")
+            }else{
+                println("no perteneces a ningun grupo")
+            }
         }
     }catch (e:Exception) {
         print("En la puta me cago")
+    }
+}
+// ------------------------------------------------------------------------------------------------------------------
+fun condiu2ej8(){
+    try {
+
+    }catch (e:Exception) {
+        println("Error inesperado")
     }
 }
