@@ -17,5 +17,10 @@ fun main() {
     //condiu2ej2()
     //condiu2ej3()
     //condiu2ej6()
-    condiu2ej8()
+    //condiu2ej8()
+    //condiu2ej10()
+    //iteru2ej2()
+    //iteru2ej4()
+    //iteru2ej6()
 }
+
