@@ -22,5 +22,11 @@ fun main() {
     //iteru2ej2()
     //iteru2ej4()
     //iteru2ej6()
+    //iteru2ej7()
+    //iteru2ej8()
+    //iteru2ej13()
+    //iteru2ej15()
+    //iteru2ej18()
+    iteru2ej19()
 }
 

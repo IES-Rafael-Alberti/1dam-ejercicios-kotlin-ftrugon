@@ -186,6 +186,7 @@
 // ------------------------------------------------------------------------------------------------------------------
  /**
   * Otras funciones
+  * @param mensage: mensaje que queremos poner en formato capitalize
   */
  fun capitalize(mensage: String) : String {
 
