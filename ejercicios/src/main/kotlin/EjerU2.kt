@@ -352,12 +352,126 @@ fun iteru2ej18() {
  * ó 2 se imprimirá un texto. Si elige la opción 3, se interrumpirá la impresión del menú y el programa finalizará.
  */
 fun iteru2ej19() {
+    var estado = false
+    do {
+
+        impopciones()
+        print("Seleccione una opción: ")
+        val opcion = try {
+            readln().toInt()
+        }catch (e:Exception){
+            4
+        }
+        clearscreen()
+        when (opcion){
+            1 -> println("Has elegido la opcion 1")
+            2 -> println("Has elegido la opcion 2")
+            3 -> {
+                println("Saliendo del programa")
+                estado = true
+            }
+            else -> println("Opcion no valida")
+        }
+
+    }while (!estado)
+}
+
+fun impopciones(){
+    println("1. Comenzar programa")
+    println("2. Imprimir listado")
+    println("3. Finalizar programa")
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * Le pide al usuario una frase y devuelve un la palabra mas larga, el tamaño de la palabra y el numero de palabras
+ * de la frase
+ */
+fun iteru2ej25(){
+    print("Dime tu frase: ")
+    val frase = readln()
+    val separada = frase.split(" ")
+    var maslarga = ""
+    var contar = 0
+    if (frase.isNotBlank()) {
+        for (palabra in separada){
+            if (palabra.length > maslarga.length){
+                maslarga = palabra
+            }
+            contar ++
+        }
+        println("La palabra mas larga es: $maslarga con ${maslarga.length} letras")
+        println("La frase tenia $contar palabras")
+    }else{
+        println("La frase introducida no es valida")
+    }
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos
+ * los números impares desde 1 hasta ese número separados por comas.
+ */
+fun exepu2ej2() {
     try {
-        println("1- comenzar programa")
-        println("2- imprimir listado")
-        println("3-finalizar programa")
-        val opcion = readln().toInt()
-    }catch (e:Exception) {
+        print("Dime el numero: ")
+        val num = readln().toInt()
+        var linea = ""
+        for (i in 0..num){
+            if (i % 2 == 1) {
+                //if (i == 1){
+                //    linea += "$i"
+                //}else{
+                //    linea += ", $i"
+                //}
+                linea += if (i == 1){
+                    "$i"
+                }else{
+                    ", $i"
+                }
+            }
+        }
+        println(linea)
+    }catch (e:Exception){
+        println("Error inesperdo")
+    }
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás
+ * desde ese número hasta cero separados por comas. Deberá solicitar el número hasta introducir uno correcto.
+ */
+fun exepu2ej3() {
+    try {
+        print("Dime el numero: ")
+        val num = readln().toInt()
+        var linea = ""
+        for (i in 0..num){
+            //if (i == 0){
+            //    linea = "$i"
+            //}else{
+            //    linea = "$i,$linea"
+            //}
+            linea = if (i == 0){
+                "$i"
+            }else{
+                "$i,$linea"
+            }
+        }
+        println(linea)
+
+    }catch (e:Exception){
         println("Error inesperado")
+    }
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * un programa que pida al usuario un número entero, si la entrada no es correcta, mostrará el mensaje
+ * "La entrada no es correcta" y lanzará la excepción capturada.
+ */
+fun exepu2ej4() {
+    try {
+        print("Dime un numero: ")
+        val num = readln().toInt()
+    }catch (e:Exception){
+        println("La entrada no es valida")
     }
 }

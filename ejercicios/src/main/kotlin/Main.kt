@@ -1,3 +1,8 @@
+fun clearscreen (){
+    for (i in 1..100)
+        println()
+}
+
 fun main() {
 // U1
     //u1ej1()
@@ -27,6 +32,12 @@ fun main() {
     //iteru2ej13()
     //iteru2ej15()
     //iteru2ej18()
-    iteru2ej19()
-}
+    //iteru2ej19()
+    //iteru2ej25()
+    //exepu2ej2()
+    //exepu2ej3()
+    exepu2ej4()
 
+// U3
+
+}
