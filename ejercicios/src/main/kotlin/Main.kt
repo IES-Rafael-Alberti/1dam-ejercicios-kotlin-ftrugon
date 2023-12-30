@@ -39,5 +39,6 @@ fun main() {
     //exepu2ej4()
 
 // U3
-    listuplu3ej4()
+    //listuplu3ej4()
+    listuplu3ej6()
 }
