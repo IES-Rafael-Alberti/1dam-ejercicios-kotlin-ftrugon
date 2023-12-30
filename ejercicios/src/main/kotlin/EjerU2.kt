@@ -198,7 +198,7 @@ fun iteru2ej4() {
             if (i == 0){
                 linea += i
             }else{
-                linea +="," + i
+                linea += ",$i"
             }
         }
         val invertida = linea.split(",").reversed().joinToString (",")

@@ -36,8 +36,8 @@ fun main() {
     //iteru2ej25()
     //exepu2ej2()
     //exepu2ej3()
-    exepu2ej4()
+    //exepu2ej4()
 
 // U3
-
+    listuplu3ej4()
 }
