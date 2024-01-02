@@ -40,5 +40,9 @@ fun main() {
 
 // U3
     //listuplu3ej4()
-    listuplu3ej6()
+    //listuplu3ej6()
+    //listuplu3ej8()
+    //listuplu3ej9()
+    //listuplu3ej10()
+    //listuplu3ej13()
 }
