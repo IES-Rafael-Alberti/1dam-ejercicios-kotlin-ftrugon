@@ -24,6 +24,7 @@ fun main() {
     //condiu2ej6()
     //condiu2ej8()
     //condiu2ej10()
+
     //iteru2ej2()
     //iteru2ej4()
     //iteru2ej6()
@@ -34,6 +35,7 @@ fun main() {
     //iteru2ej18()
     //iteru2ej19()
     //iteru2ej25()
+
     //exepu2ej2()
     //exepu2ej3()
     //exepu2ej4()
@@ -45,4 +47,12 @@ fun main() {
     //listuplu3ej9()
     //listuplu3ej10()
     //listuplu3ej13()
+
+    //dicciou3ej3()
+    //dicciou3ej5()
+    //dicciou3ej6()
+    //dicciou3ej7()
+    //dicciou3ej8()
+    //dicciou3ej10()
+    dicciou3ej11()
 }
