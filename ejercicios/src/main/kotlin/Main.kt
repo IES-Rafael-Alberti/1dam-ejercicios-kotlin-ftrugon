@@ -54,5 +54,12 @@ fun main() {
     //dicciou3ej7()
     //dicciou3ej8()
     //dicciou3ej10()
-    dicciou3ej11()
+    //dicciou3ej11()
+
+    //conju3ej1()
+    //conju3ej2()
+    //conju3ej3()
+    //conju3ej4()
+    //conju3ej5()
+    //conju3ej6()
 }

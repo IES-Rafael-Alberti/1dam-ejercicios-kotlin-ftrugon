@@ -1,5 +1,3 @@
-import kotlin.math.min
-
 /**
  * pregunta al usuario los números ganadores de la lotería primitiva,
  * los almacena en una lista y los muestra por pantalla ordenados de menor a mayor.
@@ -387,5 +385,175 @@ fun dicciou3ej11(){
         }
     }
     println(clientes)
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * añade a una tupla las calles de los clientes
+ */
+fun conju3ej1(){
+    val lista = listOf(
+        listOf("Nuria Costa", 5, 12780.78, "Calle Las Flores 355"),
+        listOf("Jorge Russo", 7, 699, "Mirasol 218"),
+        listOf("Nuria Costa", 7, 532.90, "Calle Las Flores 355"),
+        listOf("Julián Rodriguez", 12, 5715.99, "La Mancha 761"),
+        listOf("Jorge Russo", 15, 958, "Mirasol 218")
+    )
+    val conjuntodecalles = mutableSetOf<String>()
+    for (i in lista){
+        conjuntodecalles.add(i[3].toString())
+    }
+    println(conjuntodecalles)
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * El usuario introduce los nombres de pila de los alumnos de primaria de una escuela, finalizando cuando se introduzca “x”.
+ * A continuación, introduce los nombres de los alumnos de secundaria, finalizando al introducir “x”
+ */
+fun conju3ej2(){
+    var estado = false
+    val conjunnombresprimaria = mutableSetOf<String>()
+    println("Introduce los nombres de los alumnos de primaria: ")
+    while (!estado){
+        print("Nombre: ")
+        val nombre = readln()
+        if (nombre.lowercase() == "x"){
+            estado = true
+        }else{
+            conjunnombresprimaria.add(nombre)
+        }
+    }
+    var esta2 = false
+    val conjunnombressecundaria = mutableSetOf<String>()
+    println("Introduce los nombres de los alumnos de secundaria: ")
+    while (!esta2){
+        print("Nombre: ")
+        val nombre = readln()
+        if (nombre.lowercase() == "x"){
+            esta2 = true
+        }else{
+            conjunnombressecundaria.add(nombre)
+        }
+    }
 
+    // Mostrar los nombres de todos los alumnos de primaria y los de secundaria, sin repeticiones
+    println("Se van a mostrar los nombres de todos los alumnos de primaria y los de secundaria, sin repeticiones")
+    val los2 = conjunnombresprimaria.union(conjunnombressecundaria)
+    println(los2)
+
+    // Mostrar qué nombres se repiten entre los alumnos de primaria y secundaria.
+    println("Se van a mostrar qué nombres se repiten entre los alumnos de primaria y secundaria.")
+    val repes = conjunnombresprimaria.intersect(conjunnombressecundaria)
+    println(repes)
+
+    // Mostrar qué nombres de primaria no se repiten en los de nivel secundaria
+    println("Se van a mostrar qué nombres de primaria no se repiten en los de nivel secundaria")
+    val soloprimaria = conjunnombresprimaria - conjunnombressecundaria
+    println(soloprimaria)
+
+    // Mostrar si todos los nombres de primaria están incluidos en secundaria
+    println("Se va a mostrar si todos los nombres de primaria están incluidos en secundaria")
+    val checkados = mutableListOf<String>()
+    for (nombre in conjunnombresprimaria){
+        if (nombre in conjunnombressecundaria){
+            checkados.add(nombre)
+        }
+    }
+    if (checkados.size == conjunnombresprimaria.size) {
+        println("Todos los nombres de primaria estan en la secuandaria")
+    }else{
+        println("No todos los nombres de primaria estan en secundaria, solo estan:")
+        println(checkados)
+    }
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * @param conjunto: Es un conjunto al que se le hace la lista de potencia
+ * @return la patencia de los conjuntos
+ */
+fun conjuntoPotencia(conjunto:Set<Int>): MutableList<Set<Int>> {
+    val potencia = mutableListOf<Set<Int>>(setOf())
+    for (elemento in conjunto){
+        val nuevosSubconjuntos = mutableListOf<Set<Int>>()
+            for (subconjunto in potencia) {
+                println("hola")
+                val nuevo = subconjunto + elemento
+                nuevosSubconjuntos.add(nuevo)
+            }
+            potencia.addAll(nuevosSubconjuntos)
+    }
+    return potencia
+}
+
+/**
+ * El conjunto potencia de un conjunto S es el conjunto de todos los subconjuntos de S.
+ */
+fun conju3ej3(){
+    val conjunto = setOf(6,1,4)
+    val resultado = conjuntoPotencia(conjunto)
+    println(resultado)
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * A partir de las listas crear conjuntos y hacer cosas con los conjuntos
+ */
+fun conju3ej4(){
+    val frutas1 = listOf("manzana", "pera", "naranja", "plátano", "uva")
+    val frutas2 = listOf("manzana", "pera", "durazno", "sandía", "uva")
+    val conjuntodefrutas1 = frutas1.toSet()
+    val conjuntodefrutas2 = frutas2.toSet()
+    val frutascomunes = conjuntodefrutas1.intersect(conjuntodefrutas2)
+    println(frutascomunes)
+    val frutas_solo_en_frutas1 = mutableSetOf<String>()
+    for (fruta in conjuntodefrutas1){
+        if (fruta !in conjuntodefrutas2){
+            frutas_solo_en_frutas1.add(fruta)
+        }
+    }
+    println(frutas_solo_en_frutas1)
+    val frutas_solo_en_frutas2 = mutableSetOf<String>()
+    for (fruta in conjuntodefrutas2){
+        if (fruta !in conjuntodefrutas1){
+            frutas_solo_en_frutas2.add(fruta)
+        }
+    }
+    println(frutas_solo_en_frutas2)
+}
+// ------------------------------------------------------------------------------------------------------------------
+/**
+ * A partir de un conjunto con numeros poner en otro  conjunto los pares y los multipls de 3
+ */
+fun conju3ej5(){
+    val conjunto = setOf(1,2,3,4,5,6,7,8,9,10)
+    val pares = mutableSetOf<Int>()
+    for (numero in conjunto) {
+        if (numero % 2 == 0){
+            pares.add(numero)
+        }
+    }
+    println(pares)
+
+    val detres = mutableSetOf<Int>()
+    for (numero in conjunto) {
+        if (numero % 3 == 0){
+            detres.add(numero)
+        }
+    }
+    println(detres)
+
+    val pares_y_multiplos_de_tres = pares.intersect(detres)
+    println(pares_y_multiplos_de_tres)
+}
+// ------------------------------------------------------------------------------------------------------------------
+fun conju3ej6(){
+    val vocales = setOf('a', 'e', 'i', 'o', 'u')
+    val alfabeto = ('a'..'z').toSet()
+    val consonantes = mutableSetOf<Char>()
+    for (letra in alfabeto){
+        if (letra !in vocales){
+            consonantes.add(letra)
+        }
+    }
+    println(vocales)
+    println(consonantes)
+    println(alfabeto)
 }
