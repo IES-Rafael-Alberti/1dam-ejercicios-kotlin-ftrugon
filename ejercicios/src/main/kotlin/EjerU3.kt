@@ -544,6 +544,9 @@ fun conju3ej5(){
     println(pares_y_multiplos_de_tres)
 }
 // ------------------------------------------------------------------------------------------------------------------
+/**
+ * Hace cosas con conjuntos de vocales y abecedario
+ */
 fun conju3ej6(){
     val vocales = setOf('a', 'e', 'i', 'o', 'u')
     val alfabeto = ('a'..'z').toSet()
