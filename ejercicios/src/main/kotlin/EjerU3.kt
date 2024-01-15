@@ -391,7 +391,7 @@ fun dicciou3ej11(){
  * añade a una tupla las calles de los clientes
  */
 fun conju3ej1(){
-    val lista = listOf(
+    val lista = listOf<List<Any>>(
         listOf("Nuria Costa", 5, 12780.78, "Calle Las Flores 355"),
         listOf("Jorge Russo", 7, 699, "Mirasol 218"),
         listOf("Nuria Costa", 7, 532.90, "Calle Las Flores 355"),
@@ -399,10 +399,10 @@ fun conju3ej1(){
         listOf("Jorge Russo", 15, 958, "Mirasol 218")
     )
     val conjuntodecalles = mutableSetOf<String>()
-    for (i in lista){
-        conjuntodecalles.add(i[3].toString())
-    }
-    println(conjuntodecalles)
+    lista.forEach{ conjuntodecalles.add(it[3].toString())}
+    //lista.map { it[3].toString() }.toSet().toList().sorted()
+
+    println(conjuntodecalles.toList().joinToString(","))
 }
 // ------------------------------------------------------------------------------------------------------------------
 /**
